@@ -22,7 +22,7 @@ namespace Business.DomainClasses.S00210326.Models
 
         public int CustomerID { get; set; }
 
-        [ForeignKey("DoctorDSS")]
+        [ForeignKey("CustomerID")]
 
         public virtual Customer Customer { get; set; }
 

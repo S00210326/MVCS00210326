@@ -15,8 +15,8 @@ namespace Business.DomainClasses.S00210326.Models
 
         public int TransactionType { get; set; }
 
-        
-        public virtual TransactionType Transactiontype { get; set; }
+        //[EnumDataType(typeof(TransactionType))]
+        //public virtual TransactionType Transactiontype { get; set; }
 
         public decimal Ammount { get; set; }
 

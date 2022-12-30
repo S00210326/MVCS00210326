@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace Business.DomainClasses.S00210326.Models
 {
-    public enum TransactionType:int
+    public enum TransactionType
     {
-       Lodgement,
-       WithDrawel
-        
+        Lodgement,
+        Withdrawal
+        //public enum Type
+        //{
+
+        //    Lodgement,
+        //    WithDrawel
+
+
+        //}
     }
 }

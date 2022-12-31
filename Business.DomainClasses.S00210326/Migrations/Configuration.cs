@@ -3,6 +3,7 @@
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
+    using System.Data.Entity.ModelConfiguration.Conventions;
     using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Business.DomainClasses.S00210326.Models.AccountsContext>
@@ -21,6 +22,7 @@
             addData(context);
             context.SaveChanges();
         }
+       
         private static void addData(Models.AccountsContext context)
         {
             context.Customers.AddOrUpdate(c => c.Id, new Models.Customer[]

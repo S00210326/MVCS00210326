@@ -52,6 +52,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Migrations\202212311624091_Initial Migration.cs" />
+    <Compile Include="Migrations\202212311624091_Initial Migration.designer.cs">
+      <DependentUpon>202212311624091_Initial Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212311909254_deleted table names.cs" />
+    <Compile Include="Migrations\202212311909254_deleted table names.designer.cs">
+      <DependentUpon>202212311909254_deleted table names.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountsContext.cs" />
@@ -62,14 +70,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MVCS00210326\MVCS00210326.csproj">
-      <Project>{3535607d-0093-4f44-9b80-84cc6ee9127b}</Project>
-      <Name>MVCS00210326</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202212311624091_Initial Migration.resx">
+      <DependentUpon>202212311624091_Initial Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212311909254_deleted table names.resx">
+      <DependentUpon>202212311909254_deleted table names.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

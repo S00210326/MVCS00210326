@@ -7,13 +7,13 @@ namespace MVCS00210326.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class applicationusersandrolesseeded : IMigrationMetadata
+    public sealed partial class InitialMigrations : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(applicationusersandrolesseeded));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialMigrations));
         
         string IMigrationMetadata.Id
         {
-            get { return "202212311707599_application users and roles seeded"; }
+            get { return "202212311926151_InitialMigrations"; }
         }
         
         string IMigrationMetadata.Source

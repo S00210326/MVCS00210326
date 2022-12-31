@@ -5,18 +5,19 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD5B8A0E-DD29-48C5-A816-9E5AD162B559}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Business.DomainClasses.S00210326</RootNamespace>
-    <AssemblyName>Business.DomainClasses.S00210326</AssemblyName>
+    <ProjectGuid>{4622BB78-746A-4E08-B220-7315368E1781}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleS00201326</RootNamespace>
+    <AssemblyName>ConsoleS00201326</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -26,6 +27,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -51,18 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Migrations\202212311624091_Initial Migration.cs" />
-    <Compile Include="Migrations\202212311624091_Initial Migration.designer.cs">
-      <DependentUpon>202212311624091_Initial Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Account.cs" />
-    <Compile Include="Models\AccountsContext.cs" />
-    <Compile Include="Models\AccountType.cs" />
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Transactions.cs" />
-    <Compile Include="Models\TransactionType.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,9 +61,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212311624091_Initial Migration.resx">
-      <DependentUpon>202212311624091_Initial Migration.cs</DependentUpon>
-    </EmbeddedResource>
+    <ProjectReference Include="..\Business.DomainClasses.S00210326\Business.DomainClasses.S00210326.csproj">
+      <Project>{cd5b8a0e-dd29-48c5-a816-9e5ad162b559}</Project>
+      <Name>Business.DomainClasses.S00210326</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

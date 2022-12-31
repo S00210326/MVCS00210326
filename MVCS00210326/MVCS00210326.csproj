@@ -174,9 +174,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212311707599_application users and roles seeded.cs" />
-    <Compile Include="Migrations\202212311707599_application users and roles seeded.designer.cs">
-      <DependentUpon>202212311707599_application users and roles seeded.cs</DependentUpon>
+    <Compile Include="Migrations\202212311926151_InitialMigrations.cs" />
+    <Compile Include="Migrations\202212311926151_InitialMigrations.designer.cs">
+      <DependentUpon>202212311926151_InitialMigrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212311927267_roles added.cs" />
+    <Compile Include="Migrations\202212311927267_roles added.designer.cs">
+      <DependentUpon>202212311927267_roles added.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -265,8 +269,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212311707599_application users and roles seeded.resx">
-      <DependentUpon>202212311707599_application users and roles seeded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212311926151_InitialMigrations.resx">
+      <DependentUpon>202212311926151_InitialMigrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212311927267_roles added.resx">
+      <DependentUpon>202212311927267_roles added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

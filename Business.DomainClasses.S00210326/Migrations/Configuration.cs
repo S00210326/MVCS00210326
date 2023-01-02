@@ -27,9 +27,9 @@
         {
             context.Customers.AddOrUpdate(c => c.Id, new Models.Customer[]
             {
-               new Models.Customer() { Id = 1, Name = "Customer 1", Address = "Address for Customer 1" },
-               new Models.Customer(){Id = 2, Name = "Customer 2", Address = "Address for C 2" },
-                new Models.Customer(){Id = 3, Name = "Customer 3", Address = "Address for C 3" },
+               new Models.Customer() { Id = 1, Name = "Customer1", Address = "Address for Customer 1" },
+               new Models.Customer(){Id = 2, Name = "Customer2", Address = "Address for C 2" },
+                new Models.Customer(){Id = 3, Name = "Customer3", Address = "Address for C 3" },
 
 
             });
@@ -42,12 +42,12 @@
             });
             context.Accounts.AddOrUpdate(a => a.Id, new Models.Account[]
             {
-                new Models.Account(){Id = 1, AccountName = "Current 1", InceptionDate =  new DateTime(day:25, month:01, year:2002), CustomerID = 1, CurrentBalance = 300000, AccountTypeID = 1 },
-                 new Models.Account(){Id = 2, AccountName = "Current 2", InceptionDate =  new DateTime(day:25, month:01, year:2004), CustomerID = 1, CurrentBalance = 200000, AccountTypeID = 1 },
-                  new Models.Account(){Id = 3, AccountName = "Depost 1", InceptionDate =  new DateTime(day:25, month:01, year:2014), CustomerID = 2, CurrentBalance = 100000, AccountTypeID = 3 },
-                   new Models.Account(){Id = 4, AccountName = "Deposit 1", InceptionDate =  new DateTime(day:25, month:01, year:2011), CustomerID = 1, CurrentBalance = 500000, AccountTypeID = 3 },
-                    new Models.Account(){Id = 5, AccountName = "Savings 1", InceptionDate =  new DateTime(day:25, month:01, year:2010), CustomerID = 2, CurrentBalance = 3000, AccountTypeID = 2},
-                     new Models.Account(){Id = 6, AccountName = "Current 1", InceptionDate =  new DateTime(day:25, month:01, year:2004), CustomerID = 3, CurrentBalance = 10000, AccountTypeID = 1 },
+                new Models.Account(){Id = 1, AccountName = "Current1", InceptionDate =  new DateTime(day:25, month:01, year:2002), CustomerID = 1, CurrentBalance = 300000, AccountTypeID = 1 },
+                 new Models.Account(){Id = 2, AccountName = "Current2", InceptionDate =  new DateTime(day:25, month:01, year:2004), CustomerID = 1, CurrentBalance = 200000, AccountTypeID = 1 },
+                  new Models.Account(){Id = 3, AccountName = "Depost1", InceptionDate =  new DateTime(day:25, month:01, year:2014), CustomerID = 2, CurrentBalance = 100000, AccountTypeID = 3 },
+                   new Models.Account(){Id = 4, AccountName = "Deposit1", InceptionDate =  new DateTime(day:25, month:01, year:2011), CustomerID = 1, CurrentBalance = 500000, AccountTypeID = 3 },
+                    new Models.Account(){Id = 5, AccountName = "Savings1", InceptionDate =  new DateTime(day:25, month:01, year:2010), CustomerID = 2, CurrentBalance = 3000, AccountTypeID = 2},
+                     new Models.Account(){Id = 6, AccountName = "Current1", InceptionDate =  new DateTime(day:25, month:01, year:2004), CustomerID = 3, CurrentBalance = 10000, AccountTypeID = 1 },
             });
             context.Transactions.AddOrUpdate(t => t.Id, new Models.Transactions[]
             {

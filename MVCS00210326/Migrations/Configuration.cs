@@ -85,6 +85,10 @@
 
                         SecurityStamp = Guid.NewGuid().ToString(),
                     }, "TheCustomer$1");
+                    foreach (var error in result.Errors)
+                    {
+                        Console.WriteLine(error);
+                    }
                     if (result.Succeeded)
                     {
                         ApplicationUser Customer = manager.FindByEmail(customer.Id + "@itsligo.ie");

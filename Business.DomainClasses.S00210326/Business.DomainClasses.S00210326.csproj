@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202212311624091_Initial Migration.designer.cs">
       <DependentUpon>202212311624091_Initial Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301021907070_Changing name to no spaces.cs" />
+    <Compile Include="Migrations\202301021907070_Changing name to no spaces.designer.cs">
+      <DependentUpon>202301021907070_Changing name to no spaces.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountsContext.cs" />
@@ -72,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202212311624091_Initial Migration.resx">
       <DependentUpon>202212311624091_Initial Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301021907070_Changing name to no spaces.resx">
+      <DependentUpon>202301021907070_Changing name to no spaces.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

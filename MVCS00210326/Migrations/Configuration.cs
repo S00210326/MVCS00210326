@@ -70,12 +70,12 @@
             {
                 foreach (Customer customer in ac.Customers)
                 {
-                    //IdentityResult result = manager.Create(new ApplicationUser
-                    //{
-                    //    EmailConfirmed = true,
-                    //    EntityID = c.Id.ToString(),
-                    //    UserName = c.Name,
-                    //    Email = c.Id + "@itsligo.ie",
+                    IdentityResult result = manager.Create(new ApplicationUser
+                    {
+                        EmailConfirmed = true,
+                        EntityID = customer.Id.ToString(),
+                        UserName = customer.Name,
+                        Email = customer.Id + "@itsligo.ie",
 
 
 
@@ -83,49 +83,49 @@
 
 
 
-                    //    SecurityStamp = Guid.NewGuid().ToString(),
-                    //}, "TheCustomer$1");
-                    //if (result.Succeeded)
-                    //{
-                    //    ApplicationUser Customer = manager.FindByEmail(c.Id + "@itsligo.ie");
-                    //    if (Customer != null)
-                    //    {
-                    //        manager.AddToRoles(Customer.Id, new string[] { "Customer" });
+                        SecurityStamp = Guid.NewGuid().ToString(),
+                    }, "TheCustomer$1");
+                    if (result.Succeeded)
+                    {
+                        ApplicationUser Customer = manager.FindByEmail(customer.Id + "@itsligo.ie");
+                        if (Customer != null)
+                        {
+                            manager.AddToRoles(Customer.Id, new string[] { "Customer" });
+                        }
+                        else
+                        {
+                            throw new Exception("tthrowing");
+
+
+                        }
+                    }
+
+
+
                     //    }
-                    //    else
-                    //    {
-                    //        throw new Exception("tthrowing");
+                    //    //Take one member from each list of club members and make him club admin
+                    //    //foreach (Club c in cx.Clubs)
+                    //    //{
+                    //    //    Member adminMember = c.clubMembers.FirstOrDefault(m => m.MemberID == c.adminID);
 
-
-                    //    }
-                    //}
-
-
-
+                    //    //    ApplicationUser clubAdmin = manager.FindByEmail(adminMember.StudentID + "@itsligo.ie");
+                    //    //    if (clubAdmin != null)
+                    //    //    {
+                    //    //        manager.AddToRoles(clubAdmin.Id, new string[] { "ClubAdmin" });
                     //    //    }
-                    //    //    //Take one member from each list of club members and make him club admin
-                    //    //    //foreach (Club c in cx.Clubs)
-                    //    //    //{
-                    //    //    //    Member adminMember = c.clubMembers.FirstOrDefault(m => m.MemberID == c.adminID);
 
-                    //    //    //    ApplicationUser clubAdmin = manager.FindByEmail(adminMember.StudentID + "@itsligo.ie");
-                    //    //    //    if (clubAdmin != null)
-                    //    //    //    {
-                    //    //    //        manager.AddToRoles(clubAdmin.Id, new string[] { "ClubAdmin" });
-                    //    //    //    }
-
-                    //    //    //}
+                    //    //}
 
 
 
-
-
-                    //}
 
 
                 }
 
+
+            }
+
             }
             }
     }
-}
+

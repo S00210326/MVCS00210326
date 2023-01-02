@@ -11,13 +11,10 @@ namespace ConsoleS00201326
     {
         static void Main(string[] args)
         {
-            foreach (var item in Gt)
-            {
-
-            }
+            
             
         }
-        public List<Transactions>  GetTransactions(Customer customer)
+        public static void  GetTransactions(Customer customer)
         {
 
             using (AccountsContext db = new AccountsContext())
@@ -27,9 +24,13 @@ namespace ConsoleS00201326
                             from t in db.Transactions
                             where t.AccountID == customer.Id
                             select t;
-                return query1.ToList();
-                   
+                foreach (var item in query1)
+                {
+                    Console.WriteLine("Transaction {0} made by Customer {1}", item.Id, item.AccountID);
                 }
+
+            }
+            
 
 
 

@@ -1,0 +1,54 @@
+﻿@using Business.DomainClasses.S00210326.Models;
+@model IEnumerable<Account>
+
+@{
+    ViewBag.Title = "ViewTransactions";
+}
+
+<h2>ViewTransactions</h2>
+
+<form method="get">
+    <input type="search" name="Account" value="@ViewBag.cname" />
+    <input type="submit" name="Search by Customer Name" />
+</form>
+@foreach (Account c in Model)
+{
+    <h3>
+        @Html.DisplayFor(m => c.Name, new { @class = "control-label" })
+    </h3>
+    <table class="table">
+        <tr>
+            <th align="left">
+                Venue
+            </th>
+            <th align="left">
+                Location
+            </th>
+            <th align="left">
+                Start Date
+            </th>
+            <th align="left">
+                End Date
+            </th>
+            <th></th>
+        </tr>
+        @foreach (Transactions t in c.Customer.Name)
+        {
+            <tr>
+                <td align="left">
+                    @Html.DisplayFor(modelItem => t.Id)
+                </td>
+                <td align="left">
+                    @Html.DisplayFor(modelItem => t.Ammount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => t.TransactionDate)
+                </td>
+                <td align="left">
+                    @Html.DisplayFor(modelItem => t.)
+                </td>
+            </tr>
+        }
+    </table>
+    @Html.ActionLink("Back to List", "Index")
+
